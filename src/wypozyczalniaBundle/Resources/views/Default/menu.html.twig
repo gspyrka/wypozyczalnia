@@ -1,0 +1,12 @@
+{% if logged %}
+	Witaj {{logged}}
+    <ul>
+			<li><a href="{{ path('wypozyczalnia_orders') }}">Zamówienia</a></li>
+            <li><a href="{{ path('wypozyczalnia_wylogowanie') }}">Wyloguj</a></li>
+    </ul>
+{% else %}
+    <ul>
+            <li><a href="{{ path('wypozyczalnia_logowanie') }}">Zaloguj</a></li>
+			<li><a href="{{ path('wypozyczalnia_rejestracja') }}">Rejestracja</a></li>
+    </ul>
+{% endif %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		<div class="container">
+			<div class="row top"> 
+				<a href="{{ render(controller('AppBundle:Default:index')) }}">Wypożyczalnia Filmów</a>
+			</div>
+			
+			<div class="row scena"> 
+				<div class="col-lg-2 menu">{{ render(controller('AppBundle:Default:getMenu')) }}</div>
+				<div class="col-lg-10 tresc">{% block body %}{% endblock %}</div>
+			</div>
+
+			<div class="row stopka"> 
+					Autorzy: Grzegorz Spyrka, Adrian Syska
+			</div>
+
+		</div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

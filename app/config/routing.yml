@@ -1,0 +1,6 @@
+wypozyczalnia:
+    resource: "@wypozyczalniaBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+

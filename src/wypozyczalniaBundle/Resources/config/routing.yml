@@ -1,0 +1,33 @@
+wypozyczalnia_homepage:
+    path:     /
+    defaults: { _controller: wypozyczalniaBundle:Default:index }
+wypozyczalnia_getMenu:
+    path:     /getMenu/
+    defaults: { _controller: wypozyczalniaBundle:Default:getMenu}
+wypozyczalnia_logowanie:
+    path:     /user/login
+    defaults: { _controller: wypozyczalniaBundle:User:login }
+wypozyczalnia_rejestracja:
+    path:     /user/rejestracja
+    defaults: { _controller: wypozyczalniaBundle:User:register }
+wypozyczalnia_wylogowanie:
+    path:     /user/logout
+    defaults: { _controller: wypozyczalniaBundle:User:logout }
+wypozyczalnia_film:
+    path:     /film/showMovie/{movieName}
+    defaults: { _controller: wypozyczalniaBundle:Movie:showMovie }
+wypozyczalnia_poGatunku:
+    path:     /film/showByGender/{genderName}
+    defaults: { _controller: wypozyczalniaBundle:Movie:showByGender }
+wypozyczalnia_dodajRecenzje:
+    path:     /recenzja/dodaj/{movieId}
+    defaults: { _controller: wypozyczalniaBundle:Movie:addReview }
+wypozyczalnia_acceptEula:
+    path:     /movie/accept/{movieId}
+    defaults: { _controller: wypozyczalniaBundle:Movie:accept }
+wypozyczalnia_order:
+    path:     /movie/order/{movieId}
+    defaults: { _controller: wypozyczalniaBundle:Movie:order }
+wypozyczalnia_orders:
+    path:     /movie/orders
+    defaults: { _controller: wypozyczalniaBundle:Movie:showOrders }

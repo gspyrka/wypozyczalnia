@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="col-lg-2">
+		{% for movie in movies %}
+			<li><a href="{{ path('wypozyczalnia_film', {'movieName': movie.getName() } )}}">{{ movie.getName() }}</a></li>
+		{% endfor %}
+	</div>
+	<div class="col-lg-2">
+		{% for gender in genders %}
+			<li><a href="{{ path('wypozyczalnia_poGatunku', {'genderName': gender } )}}">{{ gender }}</a></li>
+		{% endfor %}
+	</div>
+{% endblock %}
+

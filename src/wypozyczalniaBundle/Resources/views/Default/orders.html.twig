@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+Zamówione filmy:
+	{% for movie in movies %}
+		<div class="row">
+			<div class="col-lg-2">Tytuł: {{ movie.getName() }}</div>
+			<div class="col-lg-2">Cena: {{ movie.getPrice() }}</div>
+		</div>
+	{% endfor %}
+{% endblock %}

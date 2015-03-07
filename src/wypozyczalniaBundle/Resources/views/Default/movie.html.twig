@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="row">
+		Tytu³: {{movie.getName()}}
+	</div>
+	<div class="row">
+		Opis: {{movie.getDescription()}}
+	</div>
+	<div class="row">
+		Cena: {{movie.getPrice()}}
+	</div>
+	<div class="row">
+		Obsada: 		
+				{% for actor in actors %}
+					<li>{{ actor.getName() }}</li>
+				{% endfor %}
+	</div>
+	<div class="row">
+		Recenzje: 		
+				{% for review in reviews %}
+					<div class="row">
+						<div class="col-lg-2">{{ review.getUserName() }}</div>
+						<div class="col-lg-2">{{ review.getDescription() }}</div>
+					</div>
+				{% endfor %}
+	</div>
+	<div class="row">
+		{% if logged %}
+			<a href="{{path('wypozyczalnia_dodajRecenzje', {'movieId': movie.getId() })}}">Dodaj Recenzje</a><br />
+		{% endif %}
+			<a href="{{path('wypozyczalnia_acceptEula', {'movieId': movie.getId() })}}">Zamów</a>
+	</div>
+{% endblock %}
